@@ -22,10 +22,13 @@ int main(int argc, char *argv[])
     QObject::connect(obj, SIGNAL(debugPrint(QString)), &msg, SLOT(debugPrintSlot(QString)));
 
     QQuickItem *rect = obj->findChild<QQuickItem*>("rect");
-    if (rect)
+    if (rect) {
         rect->setProperty("color", QColor(Qt::yellow));
-    else
+        QMetaObject::invokeMethod(rect, "rectFunc");
+    } else
         qDebug() << "not rect";
+
+    QMetaObject::invokeMethod(obj, "rootFunc");
 
     view.show();
 

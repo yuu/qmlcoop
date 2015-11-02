@@ -38,5 +38,14 @@ Item {
                 root.debugPrint(text);
             }
         }
+
+        function rectFunc() {
+            console.log("rect func");
+        }
     }
+
+    function rootFunc() {
+        console.log("root func");
+    }
+
 }
