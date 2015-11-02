@@ -1,39 +1,42 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.4
 
-Rectangle {
+Item {
     id: root
-    width: 600
-    height: 600
-
     signal debugPrint(string msg)
 
-    Text {
-        width: 100
-        height: 100
+    Rectangle {
+        objectName: "rect"
+        width: 600
+        height: 600
 
-        text: message.name
-        Component.onCompleted: {
-            message.name = "Jonah"
+        Text {
+            width: 100
+            height: 100
+
+            text: message.name
+            Component.onCompleted: {
+                message.name = "Jonah"
+            }
         }
-    }
 
-    Text {
-        x: 50
-        y: 0
+        Text {
+            x: 50
+            y: 0
 
-        text: message.Age()
-    }
+            text: message.Age()
+        }
 
-    TextField {
-        id: tf
-        x: 0
-        y: 20
-        placeholderText: qsTr("Enter name")
+        TextField {
+            id: tf
+            x: 0
+            y: 20
+            placeholderText: qsTr("Enter name")
 
-        onAccepted: {
-            message.name = text;
-            root.debugPrint(text);
+            onAccepted: {
+                message.name = text;
+                root.debugPrint(text);
+            }
         }
     }
 }

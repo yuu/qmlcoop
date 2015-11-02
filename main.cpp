@@ -2,6 +2,8 @@
 #include <QQuickView>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QQuickItem>
+#include <QDebug>
 #include "message.h"
 
 int main(int argc, char *argv[])
@@ -18,6 +20,12 @@ int main(int argc, char *argv[])
 
     QObject *obj = (QObject*)view.rootObject(); // setSorce後にcallしなければならない
     QObject::connect(obj, SIGNAL(debugPrint(QString)), &msg, SLOT(debugPrintSlot(QString)));
+
+    QQuickItem *rect = obj->findChild<QQuickItem*>("rect");
+    if (rect)
+        rect->setProperty("color", QColor(Qt::yellow));
+    else
+        qDebug() << "not rect";
 
     view.show();
 
