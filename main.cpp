@@ -10,6 +10,8 @@ int main(int argc, char *argv[])
 
     QQuickView view;
     message msg;
+    int age = 10;
+    msg.setAge(age);
     view.engine()->rootContext()->setContextProperty("message", &msg);
 
     view.setSource(QUrl::fromLocalFile("main.qml"));

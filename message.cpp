@@ -1,12 +1,12 @@
 #include "message.h"
 
-void message::setName(QString &name)
+void message::setAge(int &age)
 {
-    m_name = name;
+    m_age = age;
 }
 
-QString message::Name() const
+int message::Age() const
 {
-    return m_name;
+    return m_age;
 }
 

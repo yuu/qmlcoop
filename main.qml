@@ -18,6 +18,13 @@ Rectangle {
         }
     }
 
+    Text {
+        x: 50
+        y: 0
+
+        text: message.Age()
+    }
+
     TextField {
         id: tf
         x: 0
@@ -27,7 +34,6 @@ Rectangle {
         onAccepted: {
             message.name = text;
             root.debugPrint(text);
-            console.log(message.Name());
         }
     }
 }

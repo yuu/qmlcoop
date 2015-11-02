@@ -21,8 +21,8 @@ public:
         return m_name;
     }
 
-    Q_INVOKABLE void setName(QString &name);
-    Q_INVOKABLE QString Name() const;
+    Q_INVOKABLE void setAge(int &age);
+    Q_INVOKABLE int Age() const;
 
 signals:
     void nameChanged();
@@ -35,4 +35,5 @@ public slots:
 
 private:
     QString m_name;
+    int m_age;
 };
