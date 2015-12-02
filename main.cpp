@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     msg.setAge(age);
     view.engine()->rootContext()->setContextProperty("message", &msg);
 
-    view.setSource(QUrl::fromLocalFile("main.qml"));
+    view.setSource(QUrl("qrc:/main.qml"));
 
     QObject *obj = (QObject*)view.rootObject(); // setSorce後にcallしなければならない
     QObject::connect(obj, SIGNAL(debugPrint(QString)), &msg, SLOT(debugPrintSlot(QString)));

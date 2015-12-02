@@ -11,3 +11,5 @@ QT += quick
 # Input
 HEADERS += message.h
 SOURCES += message.cpp main.cpp
+
+RESOURCES += qmlcoop.qrc
