@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     message msg;
     int age = 10;
     msg.setAge(age);
-    view.engine()->rootContext()->setContextProperty("message", &msg);
+    view.engine()->rootContext()->setContextProperty("message", &msg); // setsSource前にcallしなければならない
 
     view.setSource(QUrl("qrc:/main.qml"));
 
