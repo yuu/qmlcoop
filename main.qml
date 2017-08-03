@@ -19,6 +19,9 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        plug.invert_matrix(1, 1, 1, 1, 1, 1, 1, 1);
+        var list = plug.invert_matrix(1, 1, 1, 1, 1, 1, 1, 1);
+        for (i = 0; i < 8; i++) {
+            console.out("value: " + list[i])
+        }
     }
 }
