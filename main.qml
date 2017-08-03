@@ -21,7 +21,7 @@ Rectangle {
     Component.onCompleted: {
         var list = plug.invert_matrix(1, 1, 1, 1, 1, 1, 1, 1);
         for (i = 0; i < 8; i++) {
-            console.out("value: " + list[i])
+            console.log("value: " + list[i])
         }
     }
 }
