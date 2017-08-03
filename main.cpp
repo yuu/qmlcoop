@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQuickView>
-#include <QtQml/QQmlEngine>
+#include <QtQml/QQmlEngine> // Need to qmlRegisterType
 
 #include "plug.h"
 
