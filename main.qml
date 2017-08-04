@@ -20,8 +20,8 @@ Rectangle {
 
     Component.onCompleted: {
         var list = plug.invert_matrix(1, 1, 1, 1, 1, 1, 1, 1);
-        for (i = 0; i < 8; i++) {
-            console.log("value: " + list[i])
+        for (var i = 0; i < 8; i++) {
+            console.log("value: " + list[i]);
         }
     }
 }
