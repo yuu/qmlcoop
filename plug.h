@@ -25,7 +25,8 @@ public:
                                             double x4, double y4) {
         std::array<GLfloat, 4 * 2> before = {(GLfloat)x1, (GLfloat)y1, (GLfloat)x2, (GLfloat)y2,
                                              (GLfloat)x3, (GLfloat)y3, (GLfloat)x4, (GLfloat)y4};
-        std::array<GLfloat, 4 * 2> after = {.0, .0, .0, 1., 1., 1., 1., 0.};
+        std::array<GLfloat, 4*2> after =  {1.0,-1.0, -1.0,-1.0, 2.5,2.5, -1.0,1.0};
+
         ublas::matrix<GLfloat> mat(8, 8);
         ublas::vector<GLfloat> vec(8);
 
